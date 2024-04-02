@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Gostos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Meus Gostos</h1>
+        <div class="row">
+            <div class="col">
+                <div class="feature-img">
+                    <img src="4.jpg" width="100%">
+                   
+                </div>
+            </div>
+            <div class="col">
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="1.jpg" alt="">
+                        <img src="play.png"class="play-btn" >
+                        <iframe width="10%" height="100" src="https://www.youtube.com/embed/2JgvVfOfoWI?si" frameborder="0" allowfullscreen></iframe>>
+
+                    </div>
+                    <p>Taylor Swift - Style (Taylor's Version) </p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="2.jpg" alt="">
+                        <img src="play.png"class="play-btn" onclick="playVideo('black.mp4')">
+
+                    </div>
+                    <p>Michael Jackson - Billie Jean (Official Video)</p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="3.jpg" alt="">
+                        <img src="play.png"class="play-btn" onclick="playVideo('cat.mp4')">
+
+                    </div>
+                    <p>Lana Del Rey - Young and Beautiful</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-player" id="videoplayer">
+        <video  width="100%" controls autoplay id="myvideo">
+
+            <source src="car.mp4" type="video/mp4" >
+        </video>
+        <img src="close.png" class="close-btn" onclick="stopbtn()">
+    </div>
+
+
+
+
+
+
+
+
+<script>
+
+var videoplayer = document.getElementById("videoplayer");
+var myvideo = document.getElementById("myvideo");
+
+function stopbtn(){
+    videoplayer.style.display = "none";
+}
+function playVideo(file){
+myvideo.src = file;
+videoplayer.style.display = "block";
+}
+
+</script>
+
+</body>
+</html>
